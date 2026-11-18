@@ -1,0 +1,137 @@
+
+/* -----------------------------------
+        VISUAL PRINCIPAL    
+-----------------------------------*/
+main {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    
+    /* grid no background */
+    width: 100%;
+    height: 100%;
+
+    background: #000000;
+    --gap: 5em;
+    --line: 1px;
+    --color: #ffffff33;
+
+    background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+    background-size: var(--gap) var(--gap);
+}
+
+/* ESTADOS DE HOVER E ATIVO */
+.side-btn:hover {
+    background: linear-gradient(90deg, rgba(106, 0, 255, 0.18) 0%, transparent 100%);
+}
+
+.side-btn:hover .side-num,
+.side-btn.active .side-num {
+    color: var(--neon-green);
+}
+/* Muda a cor do ícone para verde-ácido quando estiver ativo ou no hover */
+.side-btn:hover .side-icon,
+.side-btn.active .side-icon {
+    color: var(--neon-green);
+}
+
+.side-btn.active {
+    border-left: 3px solid var(--neon-green);
+    background: linear-gradient(90deg, rgba(106, 0, 255, 0.28) 0%, transparent 100%);
+}
+
+/* IMAGEM NO MEIO */
+.gato_wallpaper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-height: 95vh;
+    z-index: 2; /* Fica acima do H1 (1) e abaixo do H3 (3) */
+    pointer-events: none;
+}
+
+/* CONFIGURAÇÃO GERAL DAS FITAS */
+.fita-container {
+    position: absolute;
+    width: 120vw;
+    left: -10vw;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* FUNDO H1 */
+.container-fundo {
+    z-index: 1; /* Atrás da imagem */
+    top: 20%;
+    transform: rotate(6deg);
+}
+
+.container-fundo h1 {
+    font-size: 7rem; /* Tamanho bem grande */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--neon-green);
+}
+
+/* FRENTE H3 */
+.container-frente {
+    z-index: 3; /* Na frente da imagem */
+    top: 80%;
+    transform: rotate(-3deg);
+    background-color: var(--neon-green);
+    padding: 8px 0;
+}
+
+.container-frente h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--bg-dark);
+}
+
+/* ANIMAÇÃO INFINITA */
+.fita-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: fita-andando 68s linear infinite;
+}
+.fita-grupo {
+    display: flex;
+    flex-shrink: 0;
+}
+
+/* Faz o H3 andar para o lado oposto */
+.track-reverso {
+    animation: fita-andando-reverso 20s linear infinite;
+}
+
+@keyframes fita-andando {
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes fita-andando-reverso {
+    0%   { transform: translate3d(-50%, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+/* -----------------------------------
+        NAVEGAÇÃO    
+-----------------------------------*/

@@ -1,0 +1,187 @@
+/* -----------------------------------
+        CONFIG PADRÃO    
+-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Iceland&display=swap');
+
+:root {
+    --bg-dark: #0B001B;
+    --br-light: #f6fce8;
+    --border: #f6fce842;
+    --neon-purple: #7F3AED;
+    --neon-green: #C6FF34;
+
+    --font-title: "BBH Bartle", sans-serif;
+    --font-code: "Iceland", sans-serif;
+    --font-text: "Chakra Petch", sans-serif;
+
+    --header-height: 75px;
+    --sidebar-collapsed: 75px;
+    --sidebar-expanded: 240px;
+}
+main {
+    margin-top: var(--header-height);
+    margin-left: var(--sidebar-collapsed);
+    width: calc(100% - var(--sidebar-collapsed));
+    min-height: calc(100vh - var(--header-height));
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--bg-dark);
+    color: var(--br-light);
+
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#borda{
+    border: 1px solid var(--br-light);
+}
+
+p,a {
+    padding: 0px 20px;
+    font-family: var(--font-text);
+}
+h1, h2 {
+    padding: 0px 20px;
+    font-family: var(--font-title);
+}
+h3{
+    padding: 0px 20px;
+    font-family: var(--font-code);
+}
+
+/* -----------------------------------
+            HEADER    
+-----------------------------------*/
+/* 2. CABEÇALHO FIXO NO TOPO (LARGURA TOTAL) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--border);
+    z-index: 110; /* Fica acima da sidebar */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 22px;
+    box-sizing: border-box;
+}
+
+/* ALINHAMENTO DA LOGO E TEXTO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#logo_eye{
+    font-size: 40px;
+    color: var(--neon-purple);
+}
+
+.logo_text { 
+    font-family: var(--font-code);
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+/* ALINHAMENTO DO STATUS DO USUÁRIO (DIREITA) */
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 15px;
+}
+
+.credits strong {
+    color: var(--neon-green);
+}
+
+.user-status h3 {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* -----------------------------------
+            SIDE BAR    
+-----------------------------------*/
+
+/* 1. SIDEBAR FECHADA POR PADRÃO */
+.sidebar {
+    position: fixed; /* Deixa fixo no scroll */
+    top: var(--header-height);
+    left: 0;
+    width: var(--sidebar-collapsed);
+    height: calc(100vh - var(--header-height));
+    background-color: var(--bg-dark);
+    border-right: 1px solid var(--border);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    overflow: hidden;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+/* 2. EXPANSÃO NO HOVER */
+.sidebar:hover {
+    width: var(--sidebar-expanded);
+    box-shadow: 15px 0 35px rgba(0, 0, 0, 0.75); /* Sombra por cima do conteúdo */
+}
+
+.sidebar a{
+    text-decoration: none;
+}
+
+/* 3. BOTÕES E ALINHAMENTO DOS ÍCONES */
+.side-btn {
+    position: relative;
+    width: var(--sidebar-expanded);
+    height: 65px;
+    background: transparent;
+    border: none;
+    border-left: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 18px 0 12px;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.side-num {
+    font-family: var(--font-code);
+    font-size: 10px;
+    width: 24px;
+    text-align: left;
+    color: var(--border);
+}
+
+.side-icon {
+    font-size: 22px; /* tamanho do ícone */
+    color: var(--border);
+    flex-shrink: 0;
+    margin-right: 22px;
+    transition: color 0.25s ease, transform 0.25s ease;
+    user-select: none;
+}
+
+/* TEXTO DO MENU (INVISÍVEL QUANDO FECHADA) */
+.side-label {
+    font-family: var(--font-text);
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--br-light);
+}
