@@ -34,6 +34,10 @@ main {
     background-size: var(--gap) var(--gap);
 }
 
+/* -----------------------------------
+        SIDEBAR    
+-----------------------------------*/
+
 /* ESTADOS DE HOVER E ATIVO */
 .side-btn:hover {
     background: linear-gradient(90deg, rgba(106, 0, 255, 0.18) 0%, transparent 100%);
@@ -63,6 +67,10 @@ main {
     z-index: 2; /* Fica acima do H1 (1) e abaixo do H3 (3) */
     pointer-events: none;
 }
+
+/* -----------------------------------
+        FITA ANDANDO    
+-----------------------------------*/
 
 /* CONFIGURAÇÃO GERAL DAS FITAS */
 .fita-container {

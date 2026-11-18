@@ -34,7 +34,7 @@ body{
 
     max-width: 100%;
     overflow-x: hidden;
-    margin: 0;
+    margin-top: 70px;
     padding: 0;
 }
 
@@ -184,4 +184,27 @@ header {
     font-size: 13px;
     letter-spacing: 2px;
     color: var(--br-light);
+}
+
+/* -----------------------------------
+        SIDEBAR    
+-----------------------------------*/
+/* ESTADOS DE HOVER E ATIVO */
+.side-btn:hover {
+    background: linear-gradient(90deg, rgba(106, 0, 255, 0.18) 0%, transparent 100%);
+}
+
+.side-btn:hover .side-num,
+.side-btn.active .side-num {
+    color: var(--neon-green);
+}
+/* Muda a cor do ícone para verde-ácido quando estiver ativo ou no hover */
+.side-btn:hover .side-icon,
+.side-btn.active .side-icon {
+    color: var(--neon-green);
+}
+
+.side-btn.active {
+    border-left: 3px solid var(--neon-green);
+    background: linear-gradient(90deg, rgba(106, 0, 255, 0.28) 0%, transparent 100%);
 }

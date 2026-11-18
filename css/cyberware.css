@@ -1,19 +1,22 @@
-/* ESTADOS DE HOVER E ATIVO */
-.side-btn:hover {
-    background: linear-gradient(90deg, rgba(106, 0, 255, 0.18) 0%, transparent 100%);
+/* -----------------------------------
+        IMAGEM    
+-----------------------------------*/
+.img-coluna{
+
 }
 
-.side-btn:hover .side-num,
-.side-btn.active .side-num {
-    color: var(--neon-green);
+.busca{
+    display: flex;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
 }
-/* Muda a cor do ícone para verde-ácido quando estiver ativo ou no hover */
-.side-btn:hover .side-icon,
-.side-btn.active .side-icon {
-    color: var(--neon-green);
+.busca input{
+    background-color: var(--bg-purple);
+    border: none;
+    height: 30px;
+    width: 40%;
 }
-
-.side-btn.active {
-    border-left: 3px solid var(--neon-green);
-    background: linear-gradient(90deg, rgba(106, 0, 255, 0.28) 0%, transparent 100%);
+.busca input::selection{
+    color: var(--neon-green);
 }
