@@ -5,7 +5,7 @@
 
 :root {
     --bg-dark: #0B001B;
-    --br-light: #f6fce8;
+    --bg-light: #f6fce8;
     --border: #f6fce842;
     --neon-purple: #7F3AED;
     --neon-green: #C6FF34;
@@ -30,7 +30,7 @@ main {
 }
 body{
     background-color: var(--bg-dark);
-    color: var(--br-light);
+    color: var(--bg-light);
 
     max-width: 100%;
     overflow-x: hidden;
@@ -53,6 +53,11 @@ h1, h2 {
 h3{
     padding: 0px 20px;
     font-family: var(--font-code);
+}
+hr{
+    border: none;
+    background-color: var(--border);
+    height: 1px;
 }
 
 /* -----------------------------------

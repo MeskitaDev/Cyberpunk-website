@@ -2,16 +2,17 @@
 /* -----------------------------------
         VISUAL PRINCIPAL    
 -----------------------------------*/
-main {
+.gato {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; 
-    
-    /* grid no background */
-    width: 100%;
+    overflow: hidden;
+}
+main{
+        /* grid no background */
+    width: calc(100% - var(--sidebar-collapsed));
     height: 100%;
 
     background: #000000;
@@ -32,30 +33,6 @@ main {
       var(--color) var(--gap)
     );
     background-size: var(--gap) var(--gap);
-}
-
-/* -----------------------------------
-        SIDEBAR    
------------------------------------*/
-
-/* ESTADOS DE HOVER E ATIVO */
-.side-btn:hover {
-    background: linear-gradient(90deg, rgba(106, 0, 255, 0.18) 0%, transparent 100%);
-}
-
-.side-btn:hover .side-num,
-.side-btn.active .side-num {
-    color: var(--neon-green);
-}
-/* Muda a cor do ícone para verde-ácido quando estiver ativo ou no hover */
-.side-btn:hover .side-icon,
-.side-btn.active .side-icon {
-    color: var(--neon-green);
-}
-
-.side-btn.active {
-    border-left: 3px solid var(--neon-green);
-    background: linear-gradient(90deg, rgba(106, 0, 255, 0.28) 0%, transparent 100%);
 }
 
 /* IMAGEM NO MEIO */
@@ -143,3 +120,246 @@ main {
 /* -----------------------------------
         NAVEGAÇÃO    
 -----------------------------------*/
+.etiqueta{
+    font-family: var(--font-code);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.titulo{
+    background-color: var(--neon-purple);
+    color: var(--bg-dark);
+    padding: 60px;
+}
+.titulo h1{
+    font-style: italic;
+    font-size: 60px;
+}
+.titulo p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.area-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: auto; 
+    margin: 3%;
+}
+
+/* -----------------------------------
+        cards    
+-----------------------------------*/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--bg-dark);
+    border: 1px solid #ffffff1f;
+    border-top: 3px solid var(--neon-purple);
+    position: relative;
+    
+    /* Recorte diagonal no canto inferior direito */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    
+    /* Transição suave */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                border-color 0.3s ease, 
+                background-color 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px); /* Sobe */
+    background-color: #140c26bb;
+    border-color: var(--neon-green);
+    border-top-color: var(--neon-green);
+}
+
+/* ÍCONE DO CARD */
+.card .card-icon {
+    font-size: 28px;
+    color: var(--neon-purple);
+    margin-bottom: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    user-select: none;
+}
+
+.card:hover .card-icon {
+    color: var(--neon-green);
+}
+
+/* TIPOGRAFIA */
+.card h2 {
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--neon-green);
+    margin: 0;
+}
+
+.card hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 14px 0;
+    transition: border-color 0.3s ease;
+}
+
+.card:hover hr {
+    border-top-color: rgba(198, 255, 0, 0.35);
+}
+
+.card h3 {
+    font-size: 1.15rem;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+}
+
+.card p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+}
+
+/* -----------------------------------
+        SLIDER    
+-----------------------------------*/
+.slider {
+    width: auto;
+    margin: 50px 5%;
+}
+
+/* CABEÇALHO DO SLIDER (TÍTULO + SETAS) */
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slider-header h3 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--neon-green);
+    margin: 0;
+    padding: 0;
+}
+
+.setas {
+    display: flex;
+    gap: 10px;
+}
+
+.slider-seta {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-dark);
+    border: 1px solid #ffffff26;
+    color: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+}
+
+.slider-seta:hover {
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+    background-color: #c6ff0014;
+}
+
+.slider-seta span {
+    font-size: 22px;
+    margin: 0;
+    user-select: none;
+}
+
+/* JANELA EXTERNA DO CARTÃO */
+.slider-card {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+    border: 1px solid #ffffff1f;
+    border-top: 3px solid var(--neon-purple);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+/* TRILHA QUE DESLIZA HORIZONTALMENTE */
+.slider-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* CADA SLIDE (<article>) */
+.slider-track article {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    box-sizing: border-box;
+}
+
+.slider-img {
+    height: 320px;
+    background-color: var(--bg-dark);
+    border-right: 1px solid #ffffff1a;
+    overflow: hidden;
+}
+
+.slider-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-info {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide-meta {
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--neon-green);
+    margin-bottom: 10px;
+}
+
+.slider-info h3 {
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    margin: 0 0 14px 0;
+    padding: 0;
+}
+
+.slider-info p {
+    font-family: var(--font-text);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #ffffffbf;
+    margin: 0 0 22px 0;
+}
+
+.slide-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.slide-tags span {
+    font-family: var(--font-code);
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--bg-light);
+    background-color: #9d00ff24;
+    border: 1px solid #9d00ff73;
+    padding: 4px 10px;
+}
