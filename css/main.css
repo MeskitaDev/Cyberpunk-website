@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Iceland&display=swap');
 
 :root {
-    --bg-dark: #0B001B;
+    --bg-dark: #100029;
     --bg-light: #f6fce8;
     --border: #f6fce842;
     --neon-purple: #7F3AED;
@@ -38,6 +38,10 @@ body{
     padding: 0;
 }
 
+.highlight {
+    color: var(--neon-green, #c6ff00);
+}
+
 #borda{
     border: 1px solid var(--br-light);
 }
@@ -58,6 +62,50 @@ hr{
     border: none;
     background-color: var(--border);
     height: 1px;
+}
+
+/* CURSOR */
+html, body {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' viewBox='0 0 458 472'%3E%3Cpath d='M57.8631 39.6932L186.612 383.032L239.706 240.737L389.627 199.407L57.8631 39.6932Z' fill='%23C6FF34' stroke='%237F3AED' stroke-width='30' stroke-miterlimit='11.4737'/%3E%3C/svg%3E") 3 2, auto;
+}
+a, button, .slider-seta, .card {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' viewBox='0 0 458 472'%3E%3Cpath d='M57.8631 39.6932L186.612 383.032L239.706 240.737L389.627 199.407L57.8631 39.6932Z' fill='%237F3AED' stroke='%23C6FF34' stroke-width='30' stroke-miterlimit='11.4737'/%3E%3C/svg%3E") 3 2, pointer;
+}
+
+
+/* =========================================================
+    COR DE SELEÇÃO DE TEXTO 
+   ========================================================= */
+   ::selection {
+    background-color: var(--neon-green, #c6ff00); /* Fundo verde-ácido */
+    color: #0b0714; /* Texto escuro para manter alto contraste e legibilidade */
+}
+
+/* =========================================================
+    BARRA DE SCROLL PERSONALIZADA
+   ========================================================= */
+
+/* Largura da barra vertical */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Fundo da trilha por onde a barra corre */
+::-webkit-scrollbar-track {
+    background-color: #0b0714;
+    border-left: 1px solid #ffffff14;
+}
+
+/* A barra móvel */
+::-webkit-scrollbar-thumb {
+    background-color: #4b00b5;   
+    border: 1px solid var(--neon-purple, #9d00ff);
+}
+
+/* Cor da barra móvel quando o usuário passa o mouse ou arrasta */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--neon-green, #c6ff00);
+    border-color: var(--neon-green, #c6ff00);
 }
 
 /* -----------------------------------
@@ -147,8 +195,15 @@ header {
     box-shadow: 15px 0 35px rgba(0, 0, 0, 0.75); /* Sombra por cima do conteúdo */
 }
 
-.sidebar a{
+/* Remove o sublinhado e força a cor branca no link e nos estados visitado/hover */
+.sidebar-nav a{
     text-decoration: none;
+    color: #ffffff;
+}
+
+.side-btn:hover .side-label,
+.side-btn.active .side-label {
+    color: var(--neon-green);
 }
 
 /* 3. BOTÕES E ALINHAMENTO DOS ÍCONES */
@@ -212,4 +267,144 @@ header {
 .side-btn.active {
     border-left: 3px solid var(--neon-green);
     background: linear-gradient(90deg, rgba(106, 0, 255, 0.28) 0%, transparent 100%);
+}
+
+/* -----------------------------------
+        FOOTER    
+-----------------------------------*/
+footer {
+    background-color: var(--bg-dark);
+    border-top: 2px solid var(--neon-purple, #9d00ff);
+    font-family: var(--font-text);
+    color: #ffffffb3;
+    margin-top: 60px;
+    /* Garante que o footer respeite a largura da sidebar */
+    margin-left: var(--sidebar-collapsed, 70px);
+    width: calc(100% - var(--sidebar-collapsed, 70px));
+    box-sizing: border-box;
+}
+
+/* FAIXA SUPERIOR DE STATUS */
+.footer-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background-color: #9d00ff14;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: var(--neon-green);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Bolinha verde piscando */
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--neon-green);
+    animation: piscarTerminal 1.8s infinite ease-in-out;
+}
+
+@keyframes piscarTerminal {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+}
+
+.version {
+    color: #ffffff73;
+    font-size: 0.75rem;
+}
+
+/* AVISO ACADÊMICO + LINKS */
+.footer-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 36px 5%;
+    border-bottom: 1px solid #ffffff14;
+}
+
+.footer-logo {
+    display: inline-block;
+    font-family: var(--font-code);
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.footer-label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--neon-purple);
+    margin-bottom: 12px;
+}
+
+.footer-links nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffffffa6;
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--neon-green);
+    transform: translateX(4px);
+}
+
+/* BARRA INFERIOR DE CRÉDITOS */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: #ffffff80;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.dev-credit a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--neon-green);
+    background-color: #c6ff0014;
+    border: 1px solid #c6ff0059;
+    padding: 4px 10px;
+    transition: all 0.25s ease;
+}
+
+.dev-credit a:hover {
+    background-color: var(--neon-green);
+    color: var(--bg-dark);
+}
+
+.dev-credit .material-symbols-outlined {
+    font-size: 14px;
 }

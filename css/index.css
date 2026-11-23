@@ -11,10 +11,11 @@
     overflow: hidden;
 }
 main{
-        /* grid no background */
     width: calc(100% - var(--sidebar-collapsed));
     height: 100%;
-
+}
+body{
+        /* grid no background */
     background: #000000;
     --gap: 5em;
     --line: 1px;
@@ -139,22 +140,22 @@ main{
     margin-top: 20px;
     font-size: 20px;
 }
+
+
+/* -----------------------------------
+        cards    
+-----------------------------------*/
 .area-card {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     width: auto; 
-    margin: 3%;
+    margin:4%;
 }
-
-/* -----------------------------------
-        cards    
------------------------------------*/
-
 .card {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 25px;
     background-color: var(--bg-dark);
     border: 1px solid #ffffff1f;
     border-top: 3px solid var(--neon-purple);
