@@ -121,11 +121,6 @@ body{
 /* -----------------------------------
         NAVEGAÇÃO    
 -----------------------------------*/
-.etiqueta{
-    font-family: var(--font-code);
-    font-size: 15px;
-    margin-bottom: 20px;
-}
 
 .titulo{
     background-color: var(--neon-purple);
@@ -241,12 +236,8 @@ body{
 }
 
 .slider-header h3 {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
-    letter-spacing: 2px;
+    font-size: 20px;
     color: var(--neon-green);
-    margin: 0;
-    padding: 0;
 }
 
 .setas {

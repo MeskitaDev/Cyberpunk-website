@@ -57,25 +57,58 @@
     </aside>
 
     <main>
-        <div class="painel">
-            <img src="" alt="">
-        </div>
-
-        <div class="bar">
-            <div class="src-bar">
-
-            </div>
-            <div class="filtro">
-
-            </div>
-            <div class="">
-
-            </div>
-        </div>
-
-        <div class="card-products">
+        <section class="painel" style="background-image: url('assets/imagens/cybercoluna.jpg');">
+            <div class="painel-overlay"></div>
             
-        </div>
+            <div class="painel-conteudo">
+                <div class="painel-esquerda">
+                    <span class="etiqueta">01 // MODIFICAÇÃO BIOLÓGICA</span>
+                    <h1>CYBERWARE</h1>
+                </div>
+            </div>
+        </section>
+    
+        <!-- BARRA DE PESQUISA E FILTROS -->
+        <section class="bar" aria-label="Pesquisa e filtros de catálogo">
+            <div class="src-bar">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" id="searchInput" placeholder="Pesquisar por nome, classe ou ID..." aria-label="Pesquisar implante">
+            </div>
+    
+            <div class="filtro" role="group" aria-label="Filtrar por categoria">
+                <button type="button" class="filtro-btn active" data-filter="todos">Todos</button>
+                <button type="button" class="filtro-btn" data-filter="visao">Visão</button>
+                <button type="button" class="filtro-btn" data-filter="neural">Neural</button>
+                <button type="button" class="filtro-btn" data-filter="fisico">Físico</button>
+                <button type="button" class="filtro-btn" data-filter="defesa">Defesa</button>
+            </div>
+        </section>
+    
+        <!-- GRADE DE PRODUTOS -->
+        <section class="card-products" id="productsGrid">
+            
+            <!-- CARDS -->
+            <article class="product-card" data-category="visao">
+                <div class="product-top">
+                    <img src="assets/imagens/cybereye.jpg" alt="">
+                    <span class="product-id">CW-071</span>
+                    <span class="product-tier">MIL-SPEC</span>
+                </div>
+    
+                <div class="product-visual">
+                    <div class="hud-ring">
+                        <span class="material-symbols-outlined">visibility</span>
+                    </div>
+                </div>
+    
+                <div class="product-info">
+                    <span class="product-cat">VISÃO</span>
+                    <h3>OptiK // Vanta</h3>
+                    <p>Óptica multiespectral com rastreio balístico e zoom neural integrado.</p>
+                </div>
+            </article>
+    
+        </section>
     </main>
     
     <footer class="footer">

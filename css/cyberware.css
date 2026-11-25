@@ -1,8 +1,9 @@
 /* -----------------------------------
         IMAGEM    
 -----------------------------------*/
-.img-coluna{
-
+.painel{
+    background-image: url(cybercoluna.jpg);
+    height: 500px;
 }
 
 .busca{

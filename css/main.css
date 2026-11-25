@@ -38,6 +38,13 @@ body{
     padding: 0;
 }
 
+.etiqueta{
+    font-family: var(--font-code);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
 .highlight {
     color: var(--neon-green, #c6ff00);
 }
