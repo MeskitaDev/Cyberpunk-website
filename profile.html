@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUROGRID // OS v4.07</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="shortcut icon" href="assets/imagens/logo_icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" /><!-- Biblioteca Google icons -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="material-symbols-outlined" id="logo_eye">multimodal_hand_eye</span>
+            <h2 class="logo_text">NEURO<span class="highlight">GRID</span></h2>
+        </div>
+
+        <!-- Status do Utilizador / Saldo -->
+        <div class="user-status">
+            <p class="credits">CRÉDITOS: <strong>148.500 ₵</strong></p>
+            <h3>netrunner // ONLINE</h3>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="side-btn" data-tab="home">
+                <span class="side-num">01</span>
+                <span class="material-symbols-outlined side-icon">grid_view</span>
+                <span class="side-label">GRID</span>
+            </a>
+
+            <a href="cyberware.html" class="side-btn" data-tab="cyberwares">
+                <span class="side-num">02</span>
+                <span class="material-symbols-outlined side-icon">memory</span>
+                <span class="side-label">CYBERWARE</span>
+            </a>
+
+            <a href="city.html" class="side-btn" data-tab="news">
+                <span class="side-num">04</span>
+                <span class="material-symbols-outlined side-icon">mystery</span>
+                <span class="side-label">CITY</span>
+            </a>
+
+            <a href="musica.html" class="side-btn" data-tab="music">
+                <span class="side-num">05</span>
+                <span class="material-symbols-outlined side-icon">genres</span>
+                <span class="side-label">FREQUÊNCIA</span>
+            </a>
+
+            <a href="profile.html" class="side-btn active" data-tab="profile">
+                <span class="side-num">06</span>
+                <span class="material-symbols-outlined side-icon">person_eye</span>
+                <span class="side-label">OPERADOR</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="profile-hub">
+        
+        <!-- COLUNA 1: CADASTRO E CRACHÁ DO OPERADOR VISITANTE -->
+        <section class="operator-zone">
+            
+            <!-- FORMULÁRIO DE REGISTRO -->
+            <div class="cyber-form-box" id="registerBox">
+                <span class="cyber-tag">// TERMINAL_DE_ACESSO // NOVO_REGISTRO</span>
+                <h2>REGISTRAR OPERADOR</h2>
+                <p class="form-subtitle">Sincronize sua assinatura neural para gerar sua credencial de Night City e monitorar seus implantes.</p>
+
+                <form id="registerForm" class="cyber-form">
+                    <div class="input-group">
+                        <label for="opNome">NOME / CODINOME</label>
+                        <input type="text" id="opNome" placeholder="Ex: V / David Martinez" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="opDistrito">DISTRITO DE ORIGEM</label>
+                        <input type="text" id="opDistrito" placeholder="Ex: Watson, Kabuki // Night City" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="opPerfil">ESPECIALIZAÇÃO BIOLÓGICA</label>
+                        <select id="opPerfil">
+                            <option value="80">Civil Padrão (Limite Neural: 80 PTS)</option>
+                            <option value="100" selected>Mercenário / Solo (Limite Neural: 100 PTS)</option>
+                            <option value="120">Netrunner Adaptado (Limite Neural: 120 PTS)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="cyber-submit-btn">EMITIR CREDENCIAL NEURAL</button>
+                </form>
+            </div>
+
+            <!-- CRACHÁ (APARECE APÓS O CADASTRO) -->
+            <div class="id-card-wrapper" id="idCardWrapper" style="display: none;">
+
+
+                <!-- CARTÃO -->
+                <div class="badge">
+                    <div class="badge-top-bar">
+                        <span class="badge-serial" id="badgeSerial">ID // NG-0140-77</span>
+                        <span class="badge-status">ATIVO</span>
+                    </div>
+
+                    <div class="badge-main">
+                        <!-- COLUNA ESQUERDA DA FOTO + CÓDIGO VERTICAL -->
+                        <div class="badge-photo-col">
+                            <span class="vertical-code" id="badgeVerticalCode">0140</span>
+                            <div class="badge-photo-frame">
+                                <!-- Troque o src pela sua imagem padrão de avatar depois -->
+                                <img src="assets/imagens/robot_profile.jpg" alt="Foto do Operador">
+                            </div>
+                            <span class="material-symbols-outlined badge-emblem">memory</span>
+                        </div>
+
+                        <!-- COLUNA DIREITA DOS DADOS -->
+                        <div class="badge-data-col">
+                            <div class="badge-name-plate">
+                                <h2 id="badgeNome">OPERADOR</h2>
+                                <span class="glyph-sub">// REGISTRO_BIOMÉTRICO_CONFIRMADO</span>
+                            </div>
+
+                            <div class="badge-field">
+                                <span class="field-label">DISTRITO // ORIGEM</span>
+                                <strong id="badgeDistrito">NIGHT CITY</strong>
+                            </div>
+
+                            <div class="badge-field">
+                                <span class="field-label">CLASSE // TOLERÂNCIA</span>
+                                <strong id="badgeClasse">SOLO (100 PTS)</strong>
+                            </div>
+
+                            <div class="badge-field">
+                                <span class="field-label">DATA DE EMISSÃO</span>
+                                <strong id="badgeData">26/11/2077</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NÍVEIS DO OPERADOR (CALCULADOS PELOS CYBERWARES EQUIPADOS) -->
+                    <div class="badge-stats">
+                        <span class="section-mini-title">// TELEMETRIA_DE_IMPLANTES_EQUIPADOS</span>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-head"><span>VISÃO</span><span id="statVisao">10%</span></div>
+                                <div class="stat-track"><div class="stat-fill" id="barVisao" style="width: 10%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-head"><span>NEURAL</span><span id="statNeural">15%</span></div>
+                                <div class="stat-track"><div class="stat-fill" id="barNeural" style="width: 15%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-head"><span>FÍSICO</span><span id="statFisico">10%</span></div>
+                                <div class="stat-track"><div class="stat-fill" id="barFisico" style="width: 10%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-head"><span>DEFESA</span><span id="statDefesa">10%</span></div>
+                                <div class="stat-track"><div class="stat-fill" id="barDefesa" style="width: 10%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TELEMETRIA CAPTURADA DO HARDWARE / PC DO USUÁRIO -->
+                    <div class="pc-telemetry">
+                        <span class="section-mini-title">// RASTREAMENTO_DE_TERMINAL_LOCAL (HARDWARE)</span>
+                        <div class="telemetry-grid" id="pcSpecsGrid">
+                            <!-- Preenchido via JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="badge-actions">
+                        <a href="cyberware.html" class="cyber-submit-btn">EQUIPAR CYBERWARES →</a>
+                        <button type="button" id="resetOpBtn" class="reset-op-btn">ALTERAR REGISTRO</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ALERTA DE ATUALIZAÇÃO DO CHIP NEURAL -->
+            <div class="chip-alert">
+                <span class="material-symbols-outlined">system_update</span>
+                <div>
+                    <strong>ALERTA DE FIRMWARE // CHIP NEURAL v4.09 DISPONÍVEL</strong>
+                    <p>Calibração sináptica recomendada para evitar latência óptica.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARTÃO MESKITADEV -->
+        <aside class="dev-dossier">
+            <div class="dossier-header">
+                <span class="cyber-tag">// ARQUITETO_DO_SISTEMA // DEV_LOG</span>
+                <span class="dev-badge">NIGHT CITY NETRUNNER</span>
+            </div>
+
+            <div class="dev-profile-top">
+                <div class="dev-avatar">
+                    <img src="assets/imagens/cyberbrain.jpg" alt="Avatar de Meskita_Dev">
+                </div>
+                <div class="dev-identity">
+                    <h2>MESKITA_DEV</h2>
+                    <span class="dev-role">Full-Stack Netrunner // Arquiteto de Interfaces</span>
+                    <span class="dev-loc">NÓ: BRASÍLIA-DF // ACADEMIA CEUB (CIÊNCIA DA COMPUTAÇÃO)</span>
+                </div>
+            </div>
+
+            <p class="dev-bio">
+                Operador especializado em fundir lógica de sistema, criatividade e estética visual de alto impacto. Em constante evolução na Matriz: atualmente compilando arquiteturas <strong>Full-Stack</strong>, protocolos de <strong>Inteligência Artificial</strong> e interfaces imersivas como o terminal <strong>NEUROGRID</strong>.
+            </p>
+
+            <!-- DADOS TÉCNICOS EM FORMATO DE TERMINAL -->
+            <div class="dev-telemetry">
+                <div class="dev-spec">
+                    <span>DIRETIVA ATUAL:</span>
+                    <strong>Web Full-Stack, Next.js, TypeScript & Integrações de IA</strong>
+                </div>
+                <div class="dev-spec">
+                    <span>EM COMPILAÇÃO:</span>
+                    <strong>Java & JavaScript Avançado</strong>
+                </div>
+            </div>
+
+            <!-- STACK DIVIDIDA POR CAMADA -->
+            <div class="dev-stack-group">
+                <span class="stack-label">// INTERFACE_&_UI_UX</span>
+                <div class="dev-skills">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JAVASCRIPT</span>
+                    <span>TYPESCRIPT</span>
+                    <span>NEXT.JS</span>
+                    <span>TAILWIND</span>
+                    <span>FIGMA</span>
+                </div>
+
+                <span class="stack-label">// NÚCLEO_BACK_END_&_DADOS</span>
+                <div class="dev-skills">
+                    <span>NODE.JS</span>
+                    <span>SUPABASE</span>
+                    <span>JAVA</span>
+                    <span>GIT / GITHUB</span>
+                    <span>GEMINI IA</span>
+                </div>
+            </div>
+
+            <!-- LINKS DE CONEXÃO -->
+            <div class="dev-links">
+                <a href="https://github.com/MeskitaDev" target="_blank" rel="noopener noreferrer" class="dev-link-item">
+                    <span class="material-symbols-outlined">code</span>
+                    <span>GITHUB // MeskitaDev</span>
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+                <a href="https://github.com/MeskitaDev/Cyberpunk-website" target="_blank" rel="noopener noreferrer" class="dev-link-item">
+                    <span class="material-symbols-outlined">folder_data</span>
+                    <span>REPOSITÓRIO // NEUROGRID</span>
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+                <a href="https://www.linkedin.com/in/juliamesq/" target="_blank" rel="noopener noreferrer" class="dev-link-item">
+                    <span class="material-symbols-outlined">hub</span>
+                    <span>LINKEDIN // CONEXÃO_NEURAL</span>
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-status">
+            <div class="status">
+                <span class="pulse-dot"></span>
+                <span>SISTEMA OPERANDO EM MODO CRIPTOGRAFADO // PROTOCOLO 404</span>
+            </div>
+            <span class="version">BUILD_V2.077 // SECURE_NODE</span>
+        </div>
+    
+        <!-- Corpo Principal do Rodapé -->
+        <div class="footer-body">
+            <div class="footer-brand">
+                <span class="material-symbols-outlined" id="logo_eye">multimodal_hand_eye</span>
+                <span class="footer-logo">NEURO<span class="highlight">GRID</span></span>
+                <p>
+                    Projeto acadêmico desenvolvido sem fins lucrativos por um fã do universo Cyberpunk. 
+                    Todas as marcas, imagens, personagens e referências citadas pertencem aos seus respectivos criadores e detentores de direitos autorais.
+                </p>
+            </div>
+    
+            <div class="footer-links">
+                <span class="footer-label">// ACESSO_RÁPIDO</span>
+                <nav>
+                    <a href="index.html">01. GRID</a>
+                    <a href="cyberware.html">02. CYBERWARE</a>
+                    <a href="robos.html">03. UNIDADES</a>
+                    <a href="city.html">04. CITY</a>
+                    <a href="musica.html">05. FREQUÊNCIA</a>
+                </nav>
+            </div>
+        </div>
+    
+        <!-- Barra Inferior de Direitos e Assinatura -->
+        <div class="footer-bottom">
+            <p>© 2077 NEUROGRID CORP. TODOS OS DADOS MONITORADOS.</p>
+            <p class="dev-credit">
+                DESENVOLVIDO POR // 
+                <a href="https://github.com/MeskitaDev" target="_blank">
+                    MESKITA_DEV
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </p>
+        </div>
+    </footer>
+    <script src="js/profile.js"></script>   
+</body>
+</html>

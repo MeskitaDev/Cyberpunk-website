@@ -6,6 +6,7 @@
     <title>NEUROGRID // OS v4.07</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/cyberware.css">
+    <link rel="shortcut icon" href="assets/imagens/logo_icone.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" /><!-- Biblioteca Google icons -->
 </head>
 <body>
@@ -57,7 +58,7 @@
     </aside>
 
     <main>
-        <section class="painel" style="background-image: url('assets/imagens/cybercoluna.png');">
+        <section class="painel" style="background-image: url('assets/imagens/cyber_painel.webp')">
             <div class="painel-conteudo">
                 <div class="painel-esquerda">
                     <span class="etiqueta">01 // MODIFICAÇÃO BIOLÓGICA</span>
@@ -86,23 +87,471 @@
         <section class="card-products" id="productsGrid">
             
             <!-- CARDS -->
-            <article class="product-card" data-category="visao">
+            <!-- 01. CYBEREYE (VISÃO) -->
+            <article class="product-card" data-category="visao" data-price="14500" data-psyche="8">
                 <div class="product-top">
                     <span class="product-id">CW-071</span>
                     <span class="product-tier">MIL-SPEC</span>
                 </div>
-    
+
                 <div class="product-visual">
-                    <img src="assets/imagens/cybereye.jpg" alt="">
+                    <img src="assets/imagens/cybereye.jpg" alt="Implante ocular cibernético OptiK Vanta">
                     <div class="hud-badge">
                         <span class="material-symbols-outlined">visibility</span>
                     </div>
                 </div>
-    
+
                 <div class="product-info">
                     <span class="product-cat">VISÃO</span>
                     <h3>OptiK // Vanta</h3>
-                    <p>Óptica multiespectral com rastreio balístico e zoom neural integrado.</p>
+                    <p>Óptica multiespectral Kiroshi com rastreio balístico, visão termal e zoom neural integrado de 12x.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 14.500</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 02. CYBERBRAIN (NEURAL) -->
+            <article class="product-card" data-category="neural" data-price="32000" data-psyche="18">
+                <div class="product-top">
+                    <span class="product-id">CW-104</span>
+                    <span class="product-tier">RESTRITO</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberbrain.jpg" alt="Coprocessador cortical Cortex-X9">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">psychology</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">NEURAL</span>
+                    <h3>Cortex-X9 // Overclock</h3>
+                    <p>Malha sináptica de titânio que acelera o processamento cognitivo e reduz a latência de reflexos em 60%.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 32.000</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 03. CYBERHEAD (NEURAL) -->
+            <article class="product-card" data-category="neural" data-price="18900" data-psyche="11">
+                <div class="product-top">
+                    <span class="product-id">CW-118</span>
+                    <span class="product-tier">NETRUNNER</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberhead.jpg" alt="Interface neural cervical NeuroPort">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">neurology</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">NEURAL</span>
+                    <h3>NeuroPort // v4</h3>
+                    <p>Porta occipital de fibra óptica para imersão direta na Matriz, com dissipador térmico e firewall físico.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 18.900</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 04. CYBERCOLUNA (NEURAL) -->
+            <article class="product-card" data-category="neural" data-price="48000" data-psyche="26">
+                <div class="product-top">
+                    <span class="product-id">CW-142</span>
+                    <span class="product-tier">PROTÓTIPO</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cybercoluna.png" alt="Coluna vertebral cibernética Sandevistan">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">bolt</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">NEURAL</span>
+                    <h3>Sandevistan // Spine</h3>
+                    <p>Substituição medular completa que dispara adrenalina sintética, dilatando a percepção temporal em combate.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 48.000</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 05. CYBERHAND (FÍSICO) -->
+            <article class="product-card" data-category="fisico" data-price="11200" data-psyche="6">
+                <div class="product-top">
+                    <span class="product-id">CW-205</span>
+                    <span class="product-tier">PADRÃO</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberhand.jpg" alt="Mão biônica tática GripMaster">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">back_hand</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">FÍSICO</span>
+                    <h3>GripMaster // Tactile</h3>
+                    <p>Prótese manual de precisão cirúrgica com almofadas magnéticas de aderência e link inteligente para armamentos.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 11.200</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 06. CYBERPULSE (FÍSICO) -->
+            <article class="product-card" data-category="fisico" data-price="16400" data-psyche="9">
+                <div class="product-top">
+                    <span class="product-id">CW-219</span>
+                    <span class="product-tier">MIL-SPEC</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberpulse.jpg" alt="Antebraço cibernético articulado">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">precision_manufacturing</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">FÍSICO</span>
+                    <h3>Valkyrie // Forearm</h3>
+                    <p>Servomotores hidráulicos de pulso com compartimento oculto para ferramentas de invasão e estabilizador de recuo.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 16.400</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 07. CYBERARTICULATION (FÍSICO) -->
+            <article class="product-card" data-category="fisico" data-price="21500" data-psyche="12">
+                <div class="product-top">
+                    <span class="product-id">CW-234</span>
+                    <span class="product-tier">INDUSTRIAL</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberarticulation.jpg" alt="Articulações cibernéticas de membros inferiores">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">directions_run</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">FÍSICO</span>
+                    <h3>Strider // Piston</h3>
+                    <p>Juntas hidráulicas reforçadas em liga de carbono que absorvem quedas de até 25 metros e dobram a impulsão.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 21.500</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 08. CYBERMUSCLES (FÍSICO) -->
+            <article class="product-card" data-category="fisico" data-price="27800" data-psyche="15">
+                <div class="product-top">
+                    <span class="product-id">CW-251</span>
+                    <span class="product-tier">MIL-SPEC</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cybermuscles.jpg" alt="Fibras musculares sintéticas MyoFlex">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">fitness_center</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">FÍSICO</span>
+                    <h3>MyoFlex // Nano-Fiber</h3>
+                    <p>Feixes de polímero eletroativo trançados aos tendões naturais, elevando a força física a padrões sobre-humanos.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 27.800</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 09. CYBERHEART (FÍSICO) -->
+            <article class="product-card" data-category="fisico" data-price="35000" data-psyche="14">
+                <div class="product-top">
+                    <span class="product-id">CW-288</span>
+                    <span class="product-tier">BIOTECH</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberheart.jpg" alt="Coração cibernético de duplo rotor">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">cardiology</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">FÍSICO</span>
+                    <h3>Aegis // Twin-Pump</h3>
+                    <p>Bomba cardíaca sintética de fluxo contínuo que oxigena o sangue instantaneamente e previne colapsos por choque.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 35.000</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 10. CYBERSKIN (DEFESA) -->
+            <article class="product-card" data-category="defesa" data-price="19500" data-psyche="10">
+                <div class="product-top">
+                    <span class="product-id">CW-302</span>
+                    <span class="product-tier">FURTIVO</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberskin.jpg" alt="Revestimento dérmico sintético">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">layers</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">DEFESA</span>
+                    <h3>DermalWeave // Ghost</h3>
+                    <p>Malha subcutânea de grafeno flexível com isolamento térmico, resistência a cortes e assinatura infravermelha reduzida.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 19.500</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 11. CYBERARMOR (DEFESA) -->
+            <article class="product-card" data-category="defesa" data-price="29000" data-psyche="17">
+                <div class="product-top">
+                    <span class="product-id">CW-315</span>
+                    <span class="product-tier">MIL-SPEC</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberarmor.jpg" alt="Blindagem craniana hexagonal">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">shield</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">DEFESA</span>
+                    <h3>HexPlate // Cranial</h3>
+                    <p>Placas hexagonais de cerâmica balística fundidas ao crânio, oferecendo proteção total contra estilhaços e impactos.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 29.000</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 12. CYBERARMORBODY (DEFESA) -->
+            <article class="product-card" data-category="defesa" data-price="42500" data-psyche="22">
+                <div class="product-top">
+                    <span class="product-id">CW-340</span>
+                    <span class="product-tier">PESADO</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberarmorbody.jpg" alt="Carapaça blindada corporal">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">security</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">DEFESA</span>
+                    <h3>TitanShell // Torso</h3>
+                    <p>Blindagem modular de titânio articulado que suporta disparos de alto calibre sem sacrificar a mobilidade do tronco.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 42.500</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 13. CYBERSKELETON (DEFESA) -->
+            <article class="product-card" data-category="defesa" data-price="65000" data-psyche="35">
+                <div class="product-top">
+                    <span class="product-id">CW-399</span>
+                    <span class="product-tier">EXTREMO</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberskeleton.jpg" alt="Endoesqueleto completo de titânio">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">skeleton</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">DEFESA</span>
+                    <h3>EndoFrame // Omega</h3>
+                    <p>Substituição integral da estrutura óssea por liga de tungstênio-titânio. Máxima sobrevivência com altíssimo risco neural.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 65.000</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 14. CYBERSECURITY (DEFESA / UNIDADE TÁTICA) -->
+            <article class="product-card" data-category="defesa" data-price="54000" data-psyche="28">
+                <div class="product-top">
+                    <span class="product-id">CW-409</span>
+                    <span class="product-tier">CORPORATIVO</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cybersecurity.jpg" alt="Unidade cibernética tática Sentinel-09">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">shield_person</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">DEFESA</span>
+                    <h3>Sentinel-09 // Heavy Frame</h3>
+                    <p>Chassi de combate corporativo com blindagem composta branca, sensores autônomos e suporte de contenção balística.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 54.000</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 15. CYBERBLADEARM (FÍSICO / ARMAMENTO) -->
+            <article class="product-card" data-category="fisico" data-price="36500" data-psyche="24">
+                <div class="product-top">
+                    <span class="product-id">CW-418</span>
+                    <span class="product-tier">MIL-SPEC</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberbladearm.jpg" alt="Lâminas Mantis retráteis de antebraço">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">swords</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">FÍSICO</span>
+                    <h3>Mantis // Razor-Edge</h3>
+                    <p>Lâminas curvas de monofilamento térmico ocultas nos antebraços, projetadas para combate letal em curta distância.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 36.500</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 16. CYBERMASKVISION (VISÃO) -->
+            <article class="product-card" data-category="visao" data-price="25800" data-psyche="16">
+                <div class="product-top">
+                    <span class="product-id">CW-427</span>
+                    <span class="product-tier">NETRUNNER</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cybermaskvision.jpg" alt="Visor facial selado Ocula-Veil">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">visibility_off</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">VISÃO</span>
+                    <h3>Ocula-Veil // Blind-Sync</h3>
+                    <p>Substituição facial completa que elimina os olhos orgânicos por sensores LIDAR internos de 360 graus e sonar tático.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 25.800</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 17. CYBEREYEVISION (VISÃO) -->
+            <article class="product-card" data-category="visao" data-price="19200" data-psyche="9">
+                <div class="product-top">
+                    <span class="product-id">CW-436</span>
+                    <span class="product-tier">SARIF-TECH</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cybereyevision.jpg" alt="Prótese ocular mecânica Sarif Eye-See">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">camera</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">VISÃO</span>
+                    <h3>Sarif // Eye-See Mk.II</h3>
+                    <p>Prótese ocular articulada com lente macro digital, gravação holográfica contínua e interface HUD integrada ao nervo óptico.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 19.200</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
+                </div>
+            </article>
+
+            <!-- 18. CYBERWAREARM (FÍSICO) -->
+            <article class="product-card" data-category="fisico" data-price="23400" data-psyche="14">
+                <div class="product-top">
+                    <span class="product-id">CW-445</span>
+                    <span class="product-tier">INDUSTRIAL</span>
+                </div>
+
+                <div class="product-visual">
+                    <img src="assets/imagens/cyberwarearm.jpg" alt="Braço cibernético Gorilla-Frame">
+                    <div class="hud-badge">
+                        <span class="material-symbols-outlined">front_hand</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <span class="product-cat">FÍSICO</span>
+                    <h3>Gorilla-Frame // Mk.III</h3>
+                    <p>Membro superior reforçado com atuadores pneumáticos de alto torque capazes de arrombar portas blindadas e esmagar aço.</p>
+                </div>
+
+                <div class="product-footer">
+                    <span class="product-price">₡ 23.400</span>
+                    <button type="button" class="equip-btn">+ EQUIPAR</button>
                 </div>
             </article>
     
