@@ -1,23 +1,245 @@
+body{
+    background-color: black;
+}
 /* -----------------------------------
-        IMAGEM    
+        PAINEL    
 -----------------------------------*/
-.painel{
-    background-image: url(cybercoluna.jpg);
-    height: 500px;
+.painel {
+    position: relative;
+    width: auto;
+    height: 400px;
+    padding: 75px 40px 50px 40px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--neon-green);
 }
 
-.busca{
+.painel-conteudo {
+    position: relative;
+    z-index: 2;
     display: flex;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
 }
-.busca input{
-    background-color: var(--bg-purple);
-    border: none;
-    height: 30px;
-    width: 40%;
-}
-.busca input::selection{
+
+.painel-esquerda .etiqueta {
+    display: block;
+    font-size: 17px;
     color: var(--neon-green);
+    margin-bottom: 10px;
+}
+
+.painel-esquerda h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    color: white;
+    margin: 0;
+    text-shadow: 0 4px 20px #000000;
+}
+/* -----------------------------------
+        BARRA DE BUSCA    
+-----------------------------------*/
+.bar {
+    width: auto;
+    margin: 30px 5%;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.src-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 260px;
+}
+
+.src-bar .material-symbols-outlined {
+    color: var(--border);
+    font-size: 20px;
+}
+
+.src-bar input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: var(--font-text);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.src-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.425);
+}
+
+
+/* -----------------------------------
+        FILTRO    
+-----------------------------------*/
+.filtro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: rgba(255, 255, 255, 0.425);
+    font-family: var(--font-text);
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 7px 14px;
+    transition: all 0.2s ease;
+}
+
+.filtro-btn:hover {
+    color: var(--neon-green);
+    border-color: rgba(198, 255, 0, 0.35);
+}
+
+.filtro-btn.active {
+    color: var(--neon-green);
+    border-color: var(--neon-green);
+    background-color: rgba(198, 255, 0, 0.08);
+}
+/* -----------------------------------
+        PRODUTOS    
+-----------------------------------*/
+.card-products {
+    width: auto;
+    margin: 0 5% 70px 5%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-green);
+    box-shadow: 0 10px 28px #9d00ff85;
+}
+
+/* Cabeçalho limpo do Card */
+.product-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--border);
+}
+
+.product-id,
+.product-tier {
+    font-family: var(--font-code);
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+}
+
+.product-id {
+    color: #ffffff99;
+}
+
+.product-tier {
+    color: var(--neon-green);
+    font-weight: bold;
+}
+
+/* Área Visual Principal com a Imagem em Destaque */
+.product-visual {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+
+.product-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.product-card:hover .product-visual img {
+    transform: scale(1.07);
+    filter: contrast(1.3);
+}
+
+/* ícone no canto inferior */
+.hud-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 34px;
+    height: 34px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--neon-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.hud-badge .material-symbols-outlined {
+    font-size: 18px;
+    color: var(--neon-green);
+}
+
+.product-card:hover .hud-badge {
+    border-color: var(--neon-green);
+}
+
+/* Informações Inferiores do Card */
+.product-info {
+    padding: 22px 20px 26px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-cat {
+    font-family: var(--font-code);
+    font-size: 18px;
+    color: var(--neon-purple, #9d00ff);
+}
+
+.product-info h3 {
+    font-family: var(--font-text);
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: var(--text-main, #ffffff);
+    margin: 0;
+}
+
+.product-info p {
+    font-family: var(--font-text);
+    font-size: 15px;
+    line-height: 1.55;
+    color: #ffffff98;
+    margin: 4px 0 0 0;
 }
