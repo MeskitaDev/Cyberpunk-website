@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUROGRID // OS v4.07</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/musica.css">
+    <link rel="shortcut icon" href="assets/imagens/logo_icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" /><!-- Biblioteca Google icons -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="material-symbols-outlined" id="logo_eye">multimodal_hand_eye</span>
+            <h2 class="logo_text">NEURO<span class="highlight">GRID</span></h2>
+        </div>
+
+        <!-- Status do Utilizador / Saldo -->
+        <div class="user-status">
+            <p class="credits">CRÉDITOS: <strong>148.500 ₵</strong></p>
+            <h3>netrunner // ONLINE</h3>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="side-btn" data-tab="home">
+                <span class="side-num">01</span>
+                <span class="material-symbols-outlined side-icon">grid_view</span>
+                <span class="side-label">GRID</span>
+            </a>
+
+            <a href="cyberware.html" class="side-btn" data-tab="cyberwares">
+                <span class="side-num">02</span>
+                <span class="material-symbols-outlined side-icon">memory</span>
+                <span class="side-label">CYBERWARE</span>
+            </a>
+
+            <a href="city.html" class="side-btn" data-tab="news">
+                <span class="side-num">04</span>
+                <span class="material-symbols-outlined side-icon">mystery</span>
+                <span class="side-label">CITY</span>
+            </a>
+
+            <a href="musica.html" class="side-btn active" data-tab="music">
+                <span class="side-num">05</span>
+                <span class="material-symbols-outlined side-icon">genres</span>
+                <span class="side-label">FREQUÊNCIA</span>
+            </a>
+
+            <a href="profile.html" class="side-btn" data-tab="profile">
+                <span class="side-num">06</span>
+                <span class="material-symbols-outlined side-icon">person_eye</span>
+                <span class="side-label">OPERADOR</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main>
+        <!-- PAINEL SUPERIOR DA RÁDIO -->
+        <section class="painel" style="background-image: url('assets/imagens/samurai_band.jpg');">
+            <div class="painel-overlay"></div>
+            <div class="painel-conteudo">
+                <div class="painel-esquerda">
+                    <span class="etiqueta">05 // FREQUÊNCIA_DE_ÁUDIO // PIRATE_RADIO</span>
+                    <h1>NIGHT CITY // FM</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELETOR DE ESTAÇÕES DE RÁDIO -->
+        <section class="bar" aria-label="Sintonizador de estações">
+            <div class="src-bar">
+                <span class="material-symbols-outlined radio-pulse">radio</span>
+                <h3 class="feed-status-text" id="stationStatus">FREQUÊNCIA ATIVA: 98.7 NEUROGRID RADIO</h3>
+            </div>
+
+            <div class="filtro" role="group" aria-label="Escolher estação">
+                <button type="button" class="filtro-btn active"
+                    data-station="98.7 NEUROGRID RADIO"
+                    data-spotify="https://open.spotify.com/embed/playlist/3ByOaEovARdE0X1MfdXOdK?si=TtC6FCmOTCCqHAFSYgnP0w">
+                    98.7 NEUROGRID station
+                </button>
+
+                <button type="button" class="filtro-btn"
+                    data-station="107.3 Cyberpunk Night City"
+                    data-spotify="https://open.spotify.com/embed/album/1VGVJdmvOSRK2w9RKXk18A?si=Kdkqu8lIRd-gyo5fg95wFg">
+                    107.3 Morro Rock
+                </button>
+
+                <button type="button" class="filtro-btn"
+                    data-station="88.9 Ghost in the shell"
+                    data-spotify="https://open.spotify.com/embed/playlist/0o0z3FmJ5qaL6lxdwOQ8hv?si=ErnZOE4KTIumwKicE9gofA">
+                    88.9 SYNTHWAVE GRID
+                </button>
+            </div>
+        </section>
+
+        <!-- TERMINAL DO PLAYER SPOTIFY -->
+        <section class="radio-terminal">
+            <div class="radio-deck">
+                <div class="deck-header">
+                    <h3 class="cyber-tag">// DECODIFICADOR_SPOTIFY_LINK</h3>
+                    <span class="deck-live">● TRANSMISSÃO ESTÉREO</span>
+                </div>
+
+                <!-- IFRAME OFICIAL DO SPOTIFY (TEMA ESCURO) -->
+                <div class="spotify-frame-wrapper">
+                    <iframe
+                        id="spotifyPlayer"
+                        style="border-radius: 0px;"
+                        src="https://open.spotify.com/embed/playlist/3ByOaEovARdE0X1MfdXOdK?si=TtC6FCmOTCCqHAFSYgnP0w"
+                        width="100%"
+                        height="380"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="deck-footer">
+                    <span class="material-symbols-outlined">info</span>
+                    <p>Para ouvir as faixas completas até o fim da playlist sem cortes de 30s, certifique-se de estar conectado à sua conta do Spotify neste navegador.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+        <footer class="footer">
+        <div class="footer-status">
+            <div class="status">
+                <span class="pulse-dot"></span>
+                <span>SISTEMA OPERANDO EM MODO CRIPTOGRAFADO // PROTOCOLO 404</span>
+            </div>
+            <span class="version">BUILD_V2.077 // SECURE_NODE</span>
+        </div>
+    
+        <!-- Corpo Principal do Rodapé -->
+        <div class="footer-body">
+            <div class="footer-brand">
+                <span class="material-symbols-outlined" id="logo_eye">multimodal_hand_eye</span>
+                <span class="footer-logo">NEURO<span class="highlight">GRID</span></span>
+                <p>
+                    Projeto acadêmico desenvolvido sem fins lucrativos por um fã do universo Cyberpunk. 
+                    Todas as marcas, imagens, personagens e referências citadas pertencem aos seus respectivos criadores e detentores de direitos autorais.
+                </p>
+            </div>
+    
+            <div class="footer-links">
+                <span class="footer-label">// ACESSO_RÁPIDO</span>
+                <nav>
+                    <a href="index.html">01. GRID</a>
+                    <a href="cyberware.html">02. CYBERWARE</a>  
+                    <a href="city.html">04. CITY</a>
+                    <a href="musica.html">05. FREQUÊNCIA</a>
+                </nav>
+            </div>
+        </div>
+    
+        <!-- Barra Inferior de Direitos e Assinatura -->
+        <div class="footer-bottom">
+            <p>© 2077 NEUROGRID CORP. TODOS OS DADOS MONITORADOS.</p>
+            <p class="dev-credit">
+                DESENVOLVIDO POR // 
+                <a href="https://github.com/MeskitaDev" target="_blank">
+                    MESKITA_DEV
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="js/musica.js"></script>
+</body>
+</html>

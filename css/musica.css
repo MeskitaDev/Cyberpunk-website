@@ -1,0 +1,186 @@
+/* -----------------------------------
+        PAINEL    
+-----------------------------------*/
+.painel {
+    position: relative;
+    width: auto;
+    height: 40vh;
+    padding: 75px 40px 50px 40px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--neon-green);
+    margin-bottom: 40px;
+}
+
+.painel-conteudo {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.painel-esquerda .etiqueta {
+    display: block;
+    font-size: 17px;
+    color: var(--neon-green);
+    width:  45%;
+    border: 1px solid var(--border);
+    margin-bottom: 10px;
+    padding: 5px;
+    backdrop-filter: blur(4px);
+}
+
+.painel-esquerda h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    color: white;
+    margin: 0;
+    text-shadow: 0 4px 20px #000000;
+}
+
+.painel-desc{
+    background-color: var(--neon-green);
+    color: var(--bg-dark);
+    padding: 5px;
+    font-weight: 600;
+    width: 500px;
+    border: 1px solid var(--bg-dark);
+}
+
+/* =========================================================
+   BARRA DE FILTROS E BOTÕES (city.html e cyberware.html)
+   ========================================================= */
+.bar {
+    width: auto;
+    margin: 24px 5% 32px 5%;
+    padding: 16px 20px;
+    background-color: rgba(127, 58, 237, 0.08);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--neon-purple);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.src-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--neon-green);
+}
+
+.src-bar .material-symbols-outlined {
+    font-size: 22px;
+    color: var(--neon-green);
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Estilização dos botões de filtro */
+.filtro .filtro-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--bg-dark);
+    color: rgba(246, 252, 232, 0.8);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    font-family: var(--font-code);
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.filtro .filtro-btn:hover {
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+    background-color: rgba(198, 255, 52, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Estado do botão selecionado (.active) */
+.filtro .filtro-btn.active {
+    background-color: var(--neon-green);
+    border-color: var(--neon-green);
+    color: var(--bg-dark);
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(198, 255, 52, 0.35);
+}
+
+/* =========================================================
+   ESTAÇÃO DE RÁDIO
+   ========================================================= */
+.radio-pulse {
+    animation: piscarChip 1.4s infinite ease-in-out;
+}
+
+.radio-terminal {
+    width: auto;
+    margin: 0 5% 80px 5%;
+}
+
+.radio-deck {
+    background-color: rgba(16, 0, 41, 0.9);
+    border: 1px solid var(--neon-purple);
+    border-left: 4px solid var(--neon-green);
+    padding: 26px 28px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
+    box-shadow: 0 10px 30px rgba(127, 58, 237, 0.2);
+}
+
+.deck-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.deck-live {
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: var(--neon-green);
+}
+
+.spotify-frame-wrapper {
+    border: 1px solid var(--border);
+    background-color: #121212;
+    overflow: hidden;
+}
+
+.deck-footer {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background-color: rgba(198, 255, 52, 0.08);
+    border: 1px solid rgba(198, 255, 52, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.deck-footer .material-symbols-outlined {
+    color: var(--neon-green);
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.deck-footer p {
+    margin: 0;
+    font-family: var(--font-text);
+    font-size: 0.88rem;
+    color: rgba(246, 252, 232, 0.85);
+}

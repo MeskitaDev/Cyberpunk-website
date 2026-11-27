@@ -41,7 +41,8 @@ body{
     position: absolute;
     right: 0;
     bottom: 0;
-    max-height: 95vh;
+    margin-right: 80px;
+    height: 100vh;
     z-index: 2; /* Fica acima do H1 (1) e abaixo do H3 (3) */
     pointer-events: none;
 }
