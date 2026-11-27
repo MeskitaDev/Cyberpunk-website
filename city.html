@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUROGRID // OS v4.07</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/city.css">
+    <link rel="shortcut icon" href="assets/imagens/logo_icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" /><!-- Biblioteca Google icons -->
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="material-symbols-outlined" id="logo_eye">multimodal_hand_eye</span>
+            <h2 class="logo_text">NEURO<span class="highlight">GRID</span></h2>
+        </div>
+
+        <!-- Status do Utilizador / Saldo -->
+        <div class="user-status">
+            <p class="credits">CRÉDITOS: <strong>148.500 ₵</strong></p>
+            <h3>netrunner // ONLINE</h3>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="side-btn" data-tab="home">
+                <span class="side-num">01</span>
+                <span class="material-symbols-outlined side-icon">grid_view</span>
+                <span class="side-label">GRID</span>
+            </a>
+
+            <a href="cyberware.html" class="side-btn" data-tab="cyberwares">
+                <span class="side-num">02</span>
+                <span class="material-symbols-outlined side-icon">memory</span>
+                <span class="side-label">CYBERWARE</span>
+            </a>
+
+            <a href="city.html" class="side-btn active" data-tab="news">
+                <span class="side-num">04</span>
+                <span class="material-symbols-outlined side-icon">mystery</span>
+                <span class="side-label">CITY</span>
+            </a>
+
+            <a href="musica.html" class="side-btn" data-tab="music">
+                <span class="side-num">05</span>
+                <span class="material-symbols-outlined side-icon">genres</span>
+                <span class="side-label">FREQUÊNCIA</span>
+            </a>
+
+            <a href="profile.html" class="side-btn" data-tab="profile">
+                <span class="side-num">06</span>
+                <span class="material-symbols-outlined side-icon">person_eye</span>
+                <span class="side-label">OPERADOR</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main>
+        <!-- 1. TICKER DE MANCHETES URGENTES -->
+        <div class="news-ticker" role="region" aria-label="Últimas manchetes">
+            <span class="ticker-badge">N54 // AO VIVO</span>
+            <div class="ticker-window">
+                <div class="ticker-track">
+                    <span>[MUNDO REAL] CYBERPUNK: EDGERUNNERS 2 ESTREIA NA NETFLIX COM 10 EPISÓDIOS INÉDITOS //</span>
+                    <span>[NIGHT CITY] ALERTA MÁXIMO EM WATSON: QUEDA DE ENERGIA NO SETOR KABUKI APÓS INVASÃO NETRUNNER //</span>
+                    <span>[UPDATE 2.5] CD PROJEKT RED LIBERA PATCH DE MERCENÁRIOS 2 PARA CYBERPUNK 2077 //</span>
+                    <span>[PROJETO ORION] SEQUÊNCIA DE CYBERPUNK EXPANDE UNIVERSO PARA NOVA METRÓPOLE //</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. PAINEL SUPERIOR DA PÁGINA -->
+        <section class="painel" style="background-image: url('assets/imagens/cybercoluna.jpg');">
+            <div class="painel-overlay"></div>
+            <div class="painel-conteudo">
+                <div class="painel-esquerda">
+                    <span class="etiqueta">04 // REDE_DE_INFORMAÇÃO // N54_NEWS</span>
+                    <h1>CITY // FEED</h1>
+                </div>
+                <p class="painel-desc">
+                    Monitoramento duplo: ocorrências internas dos distritos de Night City e atualizações oficiais da franquia no mundo real.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. FILTROS DE CANAL DE NOTÍCIAS -->
+        <section class="bar" aria-label="Filtrar notícias">
+            <div class="src-bar">
+                <span class="material-symbols-outlined">rss_feed</span>
+                <span class="feed-status-text">SINAL SINCRONIZADO // FREQUÊNCIA MISTA</span>
+            </div>
+
+            <div class="filtro" role="group" aria-label="Categorias de notícias">
+                <button type="button" class="filtro-btn active" data-news-filter="todas">Todas (6)</button>
+                <button type="button" class="filtro-btn" data-news-filter="real">Mundo Real (Games & Anime)</button>
+                <button type="button" class="filtro-btn" data-news-filter="lore">Night City (Distritos & Lore)</button>
+            </div>
+        </section>
+
+        <!-- 4. GRADE DE NOTÍCIAS -->
+        <section class="news-grid" id="newsGrid">
+
+            <!-- NOTÍCIA 01 (DESTAQUE - MUNDO REAL / ANIME) -->
+            <article class="news-card featured-news" data-news-cat="real">
+                <div class="news-img-box">
+                    <img src="assets/imagens/edgerunners.jpg" alt="Cyberpunk Edgerunners 2 na Netflix">
+                    <span class="news-tag tag-real">MUNDO REAL // ANIME</span>
+                </div>
+                <div class="news-body">
+                    <div class="news-meta">
+                        <span>OUTUBRO 2026</span>
+                        <span>FONTE: NETFLIX / CDPR</span>
+                    </div>
+                    <h2>Cyberpunk: Edgerunners 2 chega à Netflix com nova história independente</h2>
+                    <p>Quatro anos após a jornada de David Martinez, o retorno animado a Night City apresenta 10 novos episódios dirigidos por Kai Ikarashi, explorando vingança e sobrevivência nas ruas dominadas pelas megacorporações.</p>
+                    <button type="button" class="read-news-btn"
+                        data-title="Cyberpunk: Edgerunners 2 chega à Netflix com nova história independente"
+                        data-meta="MUNDO REAL // ANIME • OUTUBRO 2026 • FONTE: NETFLIX / CD PROJEKT RED"
+                        data-full="A franquia animada retornou oficialmente à Netflix em outubro de 2026 com Cyberpunk: Edgerunners 2. Composta por 10 episódios lançados simultaneamente, a nova temporada traz personagens inéditos em uma trama independente ambientada em Night City, alcançando rapidamente o Top 3 global da plataforma com mais de 4,6 milhões de visualizações na estreia.">
+                        LER TRANSMISSÃO COMPLETA →
+                    </button>
+                </div>
+            </article>
+
+            <!-- NOTÍCIA 02 (MUNDO REAL / GAME UPDATE) -->
+            <article class="news-card" data-news-cat="real">
+                <div class="news-img-box">
+                    <img src="assets/imagens/cyberpunk-2077.jpg" alt="Atualização 2.5 de Cyberpunk 2077">
+                    <span class="news-tag tag-real">MUNDO REAL // PATCH 2.5</span>
+                </div>
+                <div class="news-body">
+                    <div class="news-meta">
+                        <span>OUTUBRO 2026</span>
+                        <span>CYBERPUNK 2077</span>
+                    </div>
+                    <h3>Atualização Mercenários 2 (Patch 2.5) traz novidades inspiradas no anime</h3>
+                    <p>A CD Projekt RED lançou o update gratuito 2.5 conectando o jogo base aos eventos da nova temporada de Edgerunners, adicionando itens e desafios fotográficos.</p>
+                    <button type="button" class="read-news-btn"
+                        data-title="Atualização Mercenários 2 (Patch 2.5) traz novidades inspiradas no anime"
+                        data-meta="MUNDO REAL // UPDATE 2.5 • OUTUBRO 2026 • CD PROJEKT RED"
+                        data-full="O Patch 2.5 (Atualização Mercenários 2) chegou para PC e consoles trazendo conteúdo comemorativo ligado à estreia de Edgerunners 2, novos desafios de modo fotografia e ajustes técnicos para os mercenários de Night City.">
+                        LER TRANSMISSÃO COMPLETA →
+                    </button>
+                </div>
+            </article>
+
+            <!-- NOTÍCIA 03 (NIGHT CITY / LORE) -->
+            <article class="news-card" data-news-cat="lore">
+                <div class="news-img-box">
+                    <img src="assets/imagens/cybersecurity.jpg" alt="Patrulha da MaxTac em Watson">
+                    <span class="news-tag tag-lore">NIGHT CITY // NCPD</span>
+                </div>
+                <div class="news-body">
+                    <div class="news-meta">
+                        <span>SETOR: WATSON</span>
+                        <span>ALERTA: NÍVEL 4</span>
+                    </div>
+                    <h3>MaxTac isola perímetro em Kabuki após surto de ciberpsicose industrial</h3>
+                    <p>Unidades pesadas de contenção foram mobilizadas durante a madrugada após um ex-operador da Militech perder o controle de implantes militares não homologados.</p>
+                    <button type="button" class="read-news-btn"
+                        data-title="MaxTac isola perímetro em Kabuki após surto de ciberpsicose industrial"
+                        data-meta="BOLETIM INTERNO NCPD • SETOR WATSON / KABUKI • NIGHT CITY"
+                        data-full="Moradores do subdistrito de Kabuki relataram cortes de energia e bloqueios aéreos por volta das 03h15. Segundo registros interceptados pela NetWatch, o incidente envolveu sobrecarga em um sistema Sandevistan clandestino. A Trauma Team recusou atendimento por falta de cobertura corporativa no local.">
+                        LER TRANSMISSÃO COMPLETA →
+                    </button>
+                </div>
+            </article>
+
+            <!-- NOTÍCIA 04 (MUNDO REAL / SEQUÊNCIA) -->
+            <article class="news-card" data-news-cat="real">
+                <div class="news-img-box">
+                    <img src="assets/imagens/blade-runner.jpg" alt="Conceito urbano de Cyberpunk 2 Projeto Orion">
+                    <span class="news-tag tag-real">MUNDO REAL // PROJETO ORION</span>
+                </div>
+                <div class="news-body">
+                    <div class="news-meta">
+                        <span>NOVEMBRO 2026</span>
+                        <span>UNREAL ENGINE 5</span>
+                    </div>
+                    <h3>Cyberpunk 2 (Projeto Orion) expande equipe e terá segunda metrópole</h3>
+                    <p>A sequência em desenvolvimento na Unreal Engine 5 contará com uma nova cidade descrita por Mike Pondsmith como uma versão sombria e vertical de Chicago.</p>
+                    <button type="button" class="read-news-btn"
+                        data-title="Cyberpunk 2 (Projeto Orion) expande equipe e terá segunda metrópole"
+                        data-meta="MUNDO REAL // DESENVOLVIMENTO • NOVEMBRO 2026 • CD PROJEKT RED"
+                        data-full="Em atualização recente aos investidores, a CD Projekt RED confirmou a ampliação das equipes de Boston, Varsóvia e Vancouver para a produção de Cyberpunk 2 (codinome Projeto Orion). O criador Mike Pondsmith revelou que, além de Night City, o jogo explorará uma segunda metrópole inspirada em uma Chicago distópica, com novos implantes adaptados a esse ecossistema.">
+                        LER TRANSMISSÃO COMPLETA →
+                    </button>
+                </div>
+            </article>
+
+            <!-- NOTÍCIA 05 (NIGHT CITY / LORE CORPORATIVO) -->
+            <article class="news-card" data-news-cat="lore">
+                <div class="news-img-box">
+                    <img src="assets/imagens/cyberbrain.jpg" alt="Servidores da Arasaka">
+                    <span class="news-tag tag-lore">NIGHT CITY // CORPORAÇÕES</span>
+                </div>
+                <div class="news-body">
+                    <div class="news-meta">
+                        <span>SETOR: CORPO PLAZA</span>
+                        <span>REDE: NETWATCH</span>
+                    </div>
+                    <h3>Arasaka anuncia nova geração de firewalls neurais contra invasões</h3>
+                    <p>Após vazamentos de dados no distrito financeiro, a divisão de cibersegurança promete blindagem total para executivos conectados à rede privada.</p>
+                    <button type="button" class="read-news-btn"
+                        data-title="Arasaka anuncia nova geração de firewalls neurais contra invasões"
+                        data-meta="BOLETIM CORPORATIVO • CORPO PLAZA • NIGHT CITY"
+                        data-full="Executivos da torre central da Arasaka apresentaram o novo protocolo Blackwall-Lite para implantes corticais corporativos. Especialistas do submundo de Pacifica afirmam que a atualização visa conter coletivos de netrunners independentes que vêm desviando carregamentos de biochips na zona portuária.">
+                        LER TRANSMISSÃO COMPLETA →
+                    </button>
+                </div>
+            </article>
+
+            <!-- NOTÍCIA 06 (NIGHT CITY / LORE SUBMUNDO) -->
+            <article class="news-card" data-news-cat="lore">
+                <div class="news-img-box">
+                    <img src="assets/imagens/akira.jpg" alt="Corridas clandestinas nas rodovias">
+                    <span class="news-tag tag-lore">NIGHT CITY // RUAS</span>
+                </div>
+                <div class="news-body">
+                    <div class="news-meta">
+                        <span>SETOR: HEYWOOD</span>
+                        <span>CLIMA: CHUVA ÁCIDA</span>
+                    </div>
+                    <h3>Corridas ilegais voltam a movimentar os viadutos de Heywood</h3>
+                    <p>Pilotos modificados com reflexos sintéticos disputam créditos e peças raras nas madrugadas chuvosas longe dos radares da polícia.</p>
+                    <button type="button" class="read-news-btn"
+                        data-title="Corridas ilegais voltam a movimentar os viadutos de Heywood"
+                        data-meta="CRÔNICAS DA RUA • HEYWOOD / SANTO DOMINGO • NIGHT CITY"
+                        data-full="Com o aumento das taxas corporativas sobre transporte, os circuitos clandestinos nos anéis viários de Heywood voltaram a atrair apostadores e mecânicos independentes. Motores híbridos e interfaces de direção neural direta são requisitos mínimos para sobreviver às curvas molhadas.">
+                        LER TRANSMISSÃO COMPLETA →
+                    </button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- 5. MODAL DE LEITURA DA NOTÍCIA COMPLETA -->
+        <div class="news-modal" id="newsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="news-modal-box">
+                <div class="modal-top">
+                    <span class="cyber-tag" id="modalMeta">// TRANSMISSÃO_INTERCEPTADA</span>
+                    <button type="button" id="closeModalBtn" class="close-modal-btn" aria-label="Fechar notícia">✕</button>
+                </div>
+                <h2 id="modalTitle">Título da Notícia</h2>
+                <p id="modalContent">Conteúdo completo...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-status">
+            <div class="status">
+                <span class="pulse-dot"></span>
+                <span>SISTEMA OPERANDO EM MODO CRIPTOGRAFADO // PROTOCOLO 404</span>
+            </div>
+            <span class="version">BUILD_V2.077 // SECURE_NODE</span>
+        </div>
+    
+        <!-- Corpo Principal do Rodapé -->
+        <div class="footer-body">
+            <div class="footer-brand">
+                <span class="material-symbols-outlined" id="logo_eye">multimodal_hand_eye</span>
+                <span class="footer-logo">NEURO<span class="highlight">GRID</span></span>
+                <p>
+                    Projeto acadêmico desenvolvido sem fins lucrativos por um fã do universo Cyberpunk. 
+                    Todas as marcas, imagens, personagens e referências citadas pertencem aos seus respectivos criadores e detentores de direitos autorais.
+                </p>
+            </div>
+    
+            <div class="footer-links">
+                <span class="footer-label">// ACESSO_RÁPIDO</span>
+                <nav>
+                    <a href="index.html">01. GRID</a>
+                    <a href="cyberware.html">02. CYBERWARE</a>  
+                    <a href="city.html">04. CITY</a>
+                    <a href="musica.html">05. FREQUÊNCIA</a>
+                </nav>
+            </div>
+        </div>
+    
+        <!-- Barra Inferior de Direitos e Assinatura -->
+        <div class="footer-bottom">
+            <p>© 2077 NEUROGRID CORP. TODOS OS DADOS MONITORADOS.</p>
+            <p class="dev-credit">
+                DESENVOLVIDO POR // 
+                <a href="https://github.com/MeskitaDev" target="_blank">
+                    MESKITA_DEV
+                    <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="js/city.js"></script>
+</body>
+</html>

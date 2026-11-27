@@ -7,7 +7,7 @@ body{
    ========================================================= */
 .profile-hub {
     width: auto;
-    margin: 36px 5% 80px 5%;
+    margin: 96px 5% 90px 10%;
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     gap: 32px;
